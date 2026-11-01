@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Completion Practice</title>
+</head>
+<body>
+
+    <h2>My Task</h2>
+
+    <input type="checkbox" id="myTask">
+    <label for="myTask">Read Economics</label>
+
+    <p id="status">Pending</p>
+
+    <script>
+        const checkbox = document.getElementById("myTask");
+        const status = document.getElementById("status");
+
+        checkbox.addEventListener("change", function () {
+
+            if (checkbox.checked) {
+                status.textContent = "Completed";
+            } else {
+                status.textContent = "Pending";
+            }
+
+        });
+    </script>
+
+</body>
+</html>
